@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Lista videojuegos</h1>
+  
+<ul>
+  {% for x in lista %}
+    <li> ID: {{ x.id }} Nombre: {{ x.nombre }} Genero: {{ x.genero }} Lanzamiento: {{ x.fecha_lanzamiento }} Plataforma: {{ x.plataforma }} </li>
+  {% endfor %}
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+    <h1>Lista de Videojuegos</h1>
+    <a href="{% url 'crear_videojuego' %}">Crear nuevo videojuego</a>
+    <ul>
+        {% for x in lista %}
+        <li>
+            {{ x.nombre }} - {{ x.genero }}
+            <a id="btn_editar" href="{% url 'actualizar_videojuego' x.id %}">Editar</a>
+            <a id="btn_borrar" href="{% url 'borrar_videojuego' x.id %}" >Eliminar</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
