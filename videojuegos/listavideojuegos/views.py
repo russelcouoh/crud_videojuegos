@@ -10,5 +10,3 @@ def pagina_inicio(request):
     'lista': lista,
   }
   return HttpResponse(template.render(context, request))
-
-  
