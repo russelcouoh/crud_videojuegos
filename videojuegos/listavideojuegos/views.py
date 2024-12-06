@@ -3,13 +3,13 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from .models import listavideojuegos
 
-
-
-
-
-
-
-
+def pagina_inicio(request):
+  lista = listavideojuegos.objects.all().values()
+  template = loader.get_template('inicio.html')
+  context = {
+    'lista': lista,
+  }
+  return HttpResponse(template.render(context, request))
 
 def crear_videojuego(request):
   if request.method == 'POST':
@@ -23,4 +23,3 @@ def crear_videojuego(request):
         )
         return HttpResponseRedirect('/inicio')
   return render(request, 'crear.html', {})
-  
