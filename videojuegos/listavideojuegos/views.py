@@ -1,8 +1,9 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
-from .models import listavideojuegos
+from .models import listavideojuegos #Importa el modelo listavideojuegos
 
+#Vista que carga la página de inicio mostrando todos los videojuegos
 def pagina_inicio(request):
   lista = listavideojuegos.objects.all().values()
   template = loader.get_template('inicio.html')
@@ -11,6 +12,7 @@ def pagina_inicio(request):
   }
   return HttpResponse(template.render(context, request))
 
+#Vista para crear un nuevo videojuego a partir de un formulario POST
 def crear_videojuego(request):
   if request.method == 'POST':
         nombre = request.POST['nombre']
@@ -24,6 +26,7 @@ def crear_videojuego(request):
         return HttpResponseRedirect('/inicio')
   return render(request, 'crear.html', {})
 
+# Vista para actualizar un videojuego existente
 def actualizar_videojuego(request, id):
     videojuego = get_object_or_404(listavideojuegos, id=id)
     if request.method == 'POST':
@@ -35,6 +38,7 @@ def actualizar_videojuego(request, id):
         return redirect('inicio')
     return render(request, 'actualizar.html', {'listavideojuegos': videojuego})
 
+#Vista para borrar un videojuego
 def borrar_videojuego(request, id):
     videojuego = get_object_or_404(listavideojuegos, id=id)
     if request.method == 'POST':
