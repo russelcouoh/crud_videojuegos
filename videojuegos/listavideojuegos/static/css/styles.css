@@ -13,14 +13,12 @@ body {
     text-align: center; /* Alinear texto al centro */
 }
 
-/* Encabezado */
 h1 {
     text-align: center;
-    margin: 20px 0;
-    color: #2c3e50;
+    color: #2b35c0;
+    margin-bottom: 20px;
 }
 
-/* Enlace para Crear nuevo videojuego */
 a {
     display: inline-block;
     text-decoration: none;
@@ -32,7 +30,6 @@ a {
     font-size: 14px;
 }
 
-/* Contenedor de la lista */
 ul {
     list-style-type: none;
     padding: 0;
@@ -41,7 +38,6 @@ ul {
     margin: 20px auto;
 }
 
-/* Estilo para cada elemento de la lista */
 ul li {
     background-color: #ffffff;
     padding: 15px;
@@ -54,34 +50,36 @@ ul li {
     font-size: 16px;
 }
 
-/* Colores alternos para los elementos de la lista */
+ul li:hover {
+    background-color: #b4fff3;
+
+}
+
+
 ul li:nth-child(even) {
     background-color: #ecf0f1;
 }
 
-/* Estilo de los enlaces dentro de la lista */
-ul li a {
+ul li:nth-child(even):hover {
+    background-color: #b4fff3;
+}
+
+
+ul li a#btn_editar {
     text-decoration: none;
+    background-color: #3498db;
     color: #fff;
     font-size: 14px;
     margin-left: 10px;
+    margin-right: 10px;
 }
 
 
-/* Estilo del enlace de eliminación */
 ul li a#btn_borrar {
     color: #ffffff;
     background-color: #c0392b;
-}
-
-/*fin estilos pagina inicio*/
-
-/*Estilos página para crear videojuegos*/
-
-h1 {
-    text-align: center;
-    margin: 20px 0;
-    color: #2c3e50;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 form {
@@ -102,21 +100,6 @@ form input, form button {
     font-size: 14px;
 }
 
-form button {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #2980b9;
-}
-
-/*fin página para crear videojuegos*/
-
-/*Estilos página para actualizar videojuegos*/
-
 .container {
     width: 900px;
     margin: 0 auto;
@@ -126,18 +109,13 @@ form button:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-    text-align: center;
-    color: #2c3e50;
-}
-
-
-
 form label {
+
     font-size: 14px;
     color: #555;
     display: block;
     margin-bottom: 5px;
+    text-align: left;
 }
 
 form button {
@@ -147,27 +125,13 @@ form button {
     cursor: pointer;
 }
 
-form button:hover {
-    background-color: #1e8449;
-}
-
-/*fin página para actualizar videojuegos*/
-
-/*Estilos página para borrar videojuegos*/
-
-
-h1 {
-    color: #c0392b;
-    margin-bottom: 20px;
-}
-
 p {
     font-size: 16px;
     color: #555;
 }
 
 form button {
-    background-color: #e74c3c;
+    background-color: #a5e73c;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -181,4 +145,8 @@ form button:hover {
 }
 
 
-/*fin página para borrar videojuegos*/
+img {
+
+    border-radius: 10px;
+    margin-bottom: 20px;
+}

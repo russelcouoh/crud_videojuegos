@@ -6,7 +6,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Actualizar Videojuego</h1>
+        <img src="{% static 'imagenes/actualizar.png' %}" alt="" style="width:600px; height:200px;">
         <form method="post">
             {% csrf_token %}
             <label for="nombre">Nombre:</label>
@@ -14,7 +14,7 @@
             
             <label for="genero">Género:</label>
             <input type="text" id="genero" name="genero" value="{{ listavideojuegos.genero }}" required><br>
-            
+
             <label for="fecha_lanzamiento">Fecha de Lanzamiento:</label>
             <input type="date" id="fecha_lanzamiento" name="fecha_lanzamiento" value="{{ listavideojuegos.fecha_lanzamiento }}" required><br>
             

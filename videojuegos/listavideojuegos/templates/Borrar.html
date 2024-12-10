@@ -6,7 +6,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Eliminar Videojuego</h1>
+        <img src="{% static 'imagenes/borrar.png' %}" alt="" style="width:600px; height:200px;">
         <p>¿Estás seguro de que deseas eliminar el videojuego <strong>{{ listavideojuegos.nombre }}</strong>?</p>
         <form method="post">
             {% csrf_token %}
