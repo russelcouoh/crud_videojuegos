@@ -7,7 +7,7 @@
 <body>
 
 <div class="container">
-    <h1>Crear Videojuego</h1>
+    <img src="{% static 'imagenes/crear.png' %}" alt="" style="width:600px; height:200px;">
 <form method="post">
     {% csrf_token %}
     <input type="text" name="nombre" placeholder="Nombre" required><br>
